@@ -8,50 +8,48 @@
 
 import UIKit
 
-/*
- A controller object that manages a simple model -- a collection of month names.
- 
- The controller serves as the data source for the page view controller; it therefore implements pageViewController:viewControllerBeforeViewController: and pageViewController:viewControllerAfterViewController:.
- It also implements a custom method, viewControllerAtIndex: which is useful in the implementation of the data source methods, and in the initial configuration of the application.
- 
- There is no need to actually create view controllers for each page in advance -- indeed doing so incurs unnecessary overhead. Given the data model, these methods create, configure, and return a new view controller on demand.
- */
+protocol Page {
+    var type: PageType { get }
+}
 
+enum PageType {
+    case Log, Training, Session
+}
 
 class ModelController: NSObject, UIPageViewControllerDataSource {
+    
+    let pageData: [PageType] = [.Log, .Training, .Session]
 
-    var pageData: [String] = []
-
-
-    override init() {
-        super.init()
-        // Create the data model.
-        let dateFormatter = DateFormatter()
-        pageData = dateFormatter.monthSymbols
-    }
-
-    func viewControllerAtIndex(_ index: Int, storyboard: UIStoryboard) -> DataViewController? {
+    func viewControllerAtIndex(_ index: Int, storyboard: UIStoryboard) -> UIViewController? {
         // Return the data view controller for the given index.
         if (self.pageData.count == 0) || (index >= self.pageData.count) {
             return nil
         }
 
-        // Create a new view controller and pass suitable data.
-        let dataViewController = storyboard.instantiateViewController(withIdentifier: "DataViewController") as! DataViewController
-        dataViewController.dataObject = self.pageData[index]
-        return dataViewController
+        // Create a new view controller
+        switch pageData[index] {
+        case .Log:
+            return storyboard.instantiateViewController(withIdentifier: "LogViewController") as! LogViewController
+        case .Training:
+            return storyboard.instantiateViewController(withIdentifier: "TrainingViewController") as! TrainingViewController
+        case .Session:
+            return storyboard.instantiateViewController(withIdentifier: "SessionViewController") as! SessionViewController
+        }
     }
 
-    func indexOfViewController(_ viewController: DataViewController) -> Int {
+    func indexOfViewController(_ viewController: UIViewController) -> Int {
         // Return the index of the given data view controller.
-        // For simplicity, this implementation uses a static array of model objects and the view controller stores the model object; you can therefore use the model object to identify the index.
-        return pageData.index(of: viewController.dataObject) ?? NSNotFound
+        if let page = viewController as? Page {
+            return pageData.index(of: page.type) ?? NSNotFound
+        }
+        
+        return NSNotFound
     }
 
     // MARK: - Page View Controller Data Source
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        var index = self.indexOfViewController(viewController as! DataViewController)
+        var index = self.indexOfViewController(viewController)
         if (index == 0) || (index == NSNotFound) {
             return nil
         }
@@ -61,7 +59,7 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
     }
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        var index = self.indexOfViewController(viewController as! DataViewController)
+        var index = self.indexOfViewController(viewController)
         if index == NSNotFound {
             return nil
         }
@@ -75,3 +73,16 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
 
 }
 
+// MARK: - Page Extensions
+
+extension LogViewController: Page {
+    var type: PageType { return .Log }
+}
+
+extension TrainingViewController: Page {
+    var type: PageType { return .Training }
+}
+
+extension SessionViewController: Page {
+    var type: PageType { return .Session }
+}

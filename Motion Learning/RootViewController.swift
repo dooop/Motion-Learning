@@ -12,6 +12,7 @@ class RootViewController: UIViewController, UIPageViewControllerDelegate {
 
     var pageViewController: UIPageViewController?
 
+    override var prefersStatusBarHidden: Bool { return true }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,7 +85,6 @@ class RootViewController: UIViewController, UIPageViewControllerDelegate {
 
         return .mid
     }
-
-
 }
+
 

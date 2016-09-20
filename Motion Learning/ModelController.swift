@@ -13,12 +13,12 @@ protocol Page {
 }
 
 enum PageType {
-    case Log, Training, Session
+    case log, session, animation
 }
 
 class ModelController: NSObject, UIPageViewControllerDataSource {
     
-    let pageData: [PageType] = [.Log, .Training, .Session]
+    let pageData: [PageType] = [.log, .session, .animation]
 
     func viewControllerAtIndex(_ index: Int, storyboard: UIStoryboard) -> UIViewController? {
         // Return the data view controller for the given index.
@@ -28,12 +28,12 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
 
         // Create a new view controller
         switch pageData[index] {
-        case .Log:
+        case .log:
             return storyboard.instantiateViewController(withIdentifier: "LogViewController") as! LogViewController
-        case .Training:
-            return storyboard.instantiateViewController(withIdentifier: "TrainingViewController") as! TrainingViewController
-        case .Session:
+        case .session:
             return storyboard.instantiateViewController(withIdentifier: "SessionViewController") as! SessionViewController
+        case .animation:
+            return storyboard.instantiateViewController(withIdentifier: "AnimationViewController") as! AnimationViewController
         }
     }
 
@@ -76,13 +76,15 @@ class ModelController: NSObject, UIPageViewControllerDataSource {
 // MARK: - Page Extensions
 
 extension LogViewController: Page {
-    var type: PageType { return .Log }
-}
-
-extension TrainingViewController: Page {
-    var type: PageType { return .Training }
+    var type: PageType { return .log }
 }
 
 extension SessionViewController: Page {
-    var type: PageType { return .Session }
+    var type: PageType { return .session }
 }
+
+extension AnimationViewController: Page {
+    var type: PageType { return .animation }
+}
+
+

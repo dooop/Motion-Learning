@@ -14,6 +14,13 @@
 		F927B4821D8F154300F4D297 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F927B4801D8F154300F4D297 /* Main.storyboard */; };
 		F927B4841D8F154300F4D297 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F927B4831D8F154300F4D297 /* Assets.xcassets */; };
 		F927B4871D8F154300F4D297 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F927B4851D8F154300F4D297 /* LaunchScreen.storyboard */; };
+		F93494551D91E20800D4FDA5 /* FFNN+Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F934944C1D91E20800D4FDA5 /* FFNN+Storage.swift */; };
+		F93494561D91E20800D4FDA5 /* FFNN.swift in Sources */ = {isa = PBXBuildFile; fileRef = F934944D1D91E20800D4FDA5 /* FFNN.swift */; };
+		F93494571D91E20800D4FDA5 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = F934944E1D91E20800D4FDA5 /* Matrix.swift */; };
+		F93494581D91E20800D4FDA5 /* Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = F934944F1D91E20800D4FDA5 /* Operations.swift */; };
+		F93494591D91E20800D4FDA5 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93494501D91E20800D4FDA5 /* Random.swift */; };
+		F934945B1D91E20800D4FDA5 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93494521D91E20800D4FDA5 /* Storage.swift */; };
+		F934945C1D91E20800D4FDA5 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93494531D91E20800D4FDA5 /* Vector.swift */; };
 		F9D73CDD1D91B9DF00A26FF4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D73CDC1D91B9DF00A26FF4 /* Extensions.swift */; };
 		F9D73CE01D91C43600A26FF4 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D73CDF1D91C43600A26FF4 /* Log.swift */; };
 		F9FFDF2E1D90747E00F63E96 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FFDF2D1D90747E00F63E96 /* LogViewController.swift */; };
@@ -33,6 +40,13 @@
 		F927B4831D8F154300F4D297 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F927B4861D8F154300F4D297 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F927B4881D8F154300F4D297 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F934944C1D91E20800D4FDA5 /* FFNN+Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FFNN+Storage.swift"; sourceTree = "<group>"; };
+		F934944D1D91E20800D4FDA5 /* FFNN.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FFNN.swift; sourceTree = "<group>"; };
+		F934944E1D91E20800D4FDA5 /* Matrix.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
+		F934944F1D91E20800D4FDA5 /* Operations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operations.swift; sourceTree = "<group>"; };
+		F93494501D91E20800D4FDA5 /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
+		F93494521D91E20800D4FDA5 /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		F93494531D91E20800D4FDA5 /* Vector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector.swift; sourceTree = "<group>"; };
 		F9D73CDC1D91B9DF00A26FF4 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F9D73CDF1D91C43600A26FF4 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		F9FFDF2D1D90747E00F63E96 /* LogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
@@ -104,9 +118,24 @@
 			path = "Motion Learning";
 			sourceTree = "<group>";
 		};
+		F934944B1D91E20800D4FDA5 /* SwiftAI */ = {
+			isa = PBXGroup;
+			children = (
+				F934944C1D91E20800D4FDA5 /* FFNN+Storage.swift */,
+				F934944D1D91E20800D4FDA5 /* FFNN.swift */,
+				F934944E1D91E20800D4FDA5 /* Matrix.swift */,
+				F934944F1D91E20800D4FDA5 /* Operations.swift */,
+				F93494501D91E20800D4FDA5 /* Random.swift */,
+				F93494521D91E20800D4FDA5 /* Storage.swift */,
+				F93494531D91E20800D4FDA5 /* Vector.swift */,
+			);
+			path = SwiftAI;
+			sourceTree = "<group>";
+		};
 		F9D73CDB1D91B9D100A26FF4 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				F934944B1D91E20800D4FDA5 /* SwiftAI */,
 				F9D73CDC1D91B9DF00A26FF4 /* Extensions.swift */,
 			);
 			name = Utilities;
@@ -255,12 +284,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9FFDF301D9074A400F63E96 /* AnimationViewController.swift in Sources */,
+				F93494551D91E20800D4FDA5 /* FFNN+Storage.swift in Sources */,
 				F927B47B1D8F154300F4D297 /* RootViewController.swift in Sources */,
+				F93494581D91E20800D4FDA5 /* Operations.swift in Sources */,
+				F93494561D91E20800D4FDA5 /* FFNN.swift in Sources */,
 				F9FFDF2E1D90747E00F63E96 /* LogViewController.swift in Sources */,
+				F934945C1D91E20800D4FDA5 /* Vector.swift in Sources */,
+				F93494591D91E20800D4FDA5 /* Random.swift in Sources */,
 				F927B47F1D8F154300F4D297 /* ModelController.swift in Sources */,
 				F9FFDF321D9074BF00F63E96 /* SessionViewController.swift in Sources */,
 				F927B4791D8F154300F4D297 /* AppDelegate.swift in Sources */,
+				F93494571D91E20800D4FDA5 /* Matrix.swift in Sources */,
 				F9D73CE01D91C43600A26FF4 /* Log.swift in Sources */,
+				F934945B1D91E20800D4FDA5 /* Storage.swift in Sources */,
 				F9D73CDD1D91B9DF00A26FF4 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

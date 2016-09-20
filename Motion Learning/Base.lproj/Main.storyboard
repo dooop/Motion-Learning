@@ -59,21 +59,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BKX-s3-XjB">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="BKX-s3-XjB">
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="PlF-Hl-jL0">
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="1vN-xH-5le"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="PlF-Hl-jL0">
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8z8-qP-EHw">
                                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                                 <state key="normal" title="START">
                                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="start:" destination="Tic-IV-5fr" eventType="touchUpInside" id="ynF-f8-fi3"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIt-oO-iz5">
                                                 <fontDescription key="fontDescription" type="system" pointSize="42"/>
                                                 <state key="normal" title="STOP">
                                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="stop:" destination="Tic-IV-5fr" eventType="touchUpInside" id="gKO-ro-bgp"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -82,6 +89,9 @@
                                         <state key="normal" title="TRAIN">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="train:" destination="Tic-IV-5fr" eventType="touchUpInside" id="GBr-c8-ot3"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -90,11 +100,15 @@
                         <constraints>
                             <constraint firstItem="BKX-s3-XjB" firstAttribute="centerY" secondItem="2XA-0C-hia" secondAttribute="centerY" id="2JU-cy-iRS"/>
                             <constraint firstItem="BKX-s3-XjB" firstAttribute="centerX" secondItem="2XA-0C-hia" secondAttribute="centerX" id="e3X-QX-YkW"/>
+                            <constraint firstItem="BKX-s3-XjB" firstAttribute="width" secondItem="2XA-0C-hia" secondAttribute="width" constant="-40" id="oto-Wk-FcU"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="1vN-xH-5le" id="8WN-Hp-yWh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j6O-rF-HJN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

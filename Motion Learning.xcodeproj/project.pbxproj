@@ -14,6 +14,7 @@
 		F927B4821D8F154300F4D297 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F927B4801D8F154300F4D297 /* Main.storyboard */; };
 		F927B4841D8F154300F4D297 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F927B4831D8F154300F4D297 /* Assets.xcassets */; };
 		F927B4871D8F154300F4D297 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F927B4851D8F154300F4D297 /* LaunchScreen.storyboard */; };
+		F9D73CDD1D91B9DF00A26FF4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D73CDC1D91B9DF00A26FF4 /* Extensions.swift */; };
 		F9FFDF2E1D90747E00F63E96 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FFDF2D1D90747E00F63E96 /* LogViewController.swift */; };
 		F9FFDF301D9074A400F63E96 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FFDF2F1D9074A400F63E96 /* AnimationViewController.swift */; };
 		F9FFDF321D9074BF00F63E96 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FFDF311D9074BF00F63E96 /* SessionViewController.swift */; };
@@ -31,6 +32,7 @@
 		F927B4831D8F154300F4D297 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F927B4861D8F154300F4D297 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F927B4881D8F154300F4D297 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9D73CDC1D91B9DF00A26FF4 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F9FFDF2D1D90747E00F63E96 /* LogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
 		F9FFDF2F1D9074A400F63E96 /* AnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		F9FFDF311D9074BF00F63E96 /* SessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				F9FFDF331D90761100F63E96 /* ViewController */,
+				F9D73CDB1D91B9D100A26FF4 /* Utilities */,
 				F927B4781D8F154300F4D297 /* AppDelegate.swift */,
 				F927B47A1D8F154300F4D297 /* RootViewController.swift */,
 				F927B47E1D8F154300F4D297 /* ModelController.swift */,
@@ -96,6 +99,14 @@
 				F927B4881D8F154300F4D297 /* Info.plist */,
 			);
 			path = "Motion Learning";
+			sourceTree = "<group>";
+		};
+		F9D73CDB1D91B9D100A26FF4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F9D73CDC1D91B9DF00A26FF4 /* Extensions.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		F9FFDF331D90761100F63E96 /* ViewController */ = {
@@ -238,6 +249,7 @@
 				F927B47F1D8F154300F4D297 /* ModelController.swift in Sources */,
 				F9FFDF321D9074BF00F63E96 /* SessionViewController.swift in Sources */,
 				F927B4791D8F154300F4D297 /* AppDelegate.swift in Sources */,
+				F9D73CDD1D91B9DF00A26FF4 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

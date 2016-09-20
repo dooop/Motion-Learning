@@ -37,15 +37,42 @@
                     <view key="view" contentMode="scaleToFill" id="kXv-dl-QDh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QDD-h9-bfU">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZeH-dG-qeC">
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ZeH-dG-qeC" firstAttribute="trailing" secondItem="QDD-h9-bfU" secondAttribute="trailing" constant="-20" id="0Ze-si-K1B"/>
+                                    <constraint firstItem="ZeH-dG-qeC" firstAttribute="bottom" secondItem="QDD-h9-bfU" secondAttribute="bottom" constant="-20" id="0wp-QY-api"/>
+                                    <constraint firstItem="ZeH-dG-qeC" firstAttribute="leading" secondItem="QDD-h9-bfU" secondAttribute="leading" constant="20" id="fwR-Md-RcW"/>
+                                    <constraint firstItem="ZeH-dG-qeC" firstAttribute="top" secondItem="QDD-h9-bfU" secondAttribute="top" constant="20" id="vBp-hr-Vr9"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QDD-h9-bfU" firstAttribute="centerX" secondItem="kXv-dl-QDh" secondAttribute="centerX" id="482-cJ-DWu"/>
+                            <constraint firstItem="QDD-h9-bfU" firstAttribute="width" secondItem="kXv-dl-QDh" secondAttribute="width" id="9Em-rD-74y"/>
+                            <constraint firstItem="QDD-h9-bfU" firstAttribute="height" secondItem="kXv-dl-QDh" secondAttribute="height" id="gKm-tK-73P"/>
+                            <constraint firstItem="QDD-h9-bfU" firstAttribute="centerY" secondItem="kXv-dl-QDh" secondAttribute="centerY" id="uLv-V4-bOj"/>
+                        </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="logLabel" destination="ZeH-dG-qeC" id="NNA-pP-D2V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zA7-Ud-eBm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="713" y="-927"/>
+            <point key="canvasLocation" x="712.79999999999995" y="-927.88605697151434"/>
         </scene>
         <!--Session View Controller-->
         <scene sceneID="IjS-bV-HHK">

@@ -10,4 +10,27 @@ import UIKit
 
 class LogViewController: UIViewController {
     
+    @IBOutlet weak var logLabel: UILabel!
+    
+    override func viewDidLoad() {
+        
+        updateLog(with: Log.shared.entries)
+        
+        Log.shared.entryWritten = updateLog
+    }
+    
+    private func updateLog(with entries: [String]) {
+        var log = ""
+        
+        for entry in entries {
+            log = "\(entry)\n\(log)"
+        }
+        
+        setLabel(with: log)
+    }
+    
+    private func setLabel(with log: String) {
+        logLabel.text = log
+        logLabel.sizeToFit()
+    }
 }

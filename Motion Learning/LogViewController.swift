@@ -26,7 +26,9 @@ class LogViewController: UIViewController {
             log = "\(entry)\n\(log)"
         }
         
-        setLabel(with: log)
+        DispatchQueue.main.async {
+            self.setLabel(with: log)
+        }
     }
     
     private func setLabel(with log: String) {

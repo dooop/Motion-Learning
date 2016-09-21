@@ -20,13 +20,27 @@ class SessionViewController: UIViewController {
     
     @IBAction func start(_ sender: UIButton) {
         activityIndicator.show()
+        
+        MotionRecognizer.shared.startSession()
     }
     
     @IBAction func stop(_ sender: UIButton) {
         activityIndicator.hide()
+        
+        MotionRecognizer.shared.stopSession()
     }
     
     @IBAction func train(_ sender: UIButton) {
-        // TODO
+        activityIndicator.show()
+        sender.isEnabled = false
+        
+        DispatchQueue.global().async {
+            MotionRecognizer.shared.train()
+            
+            DispatchQueue.main.async {
+                self.activityIndicator.hide()
+                sender.isEnabled = true
+            }
+        }
     }
 }

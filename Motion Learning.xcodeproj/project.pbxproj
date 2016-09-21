@@ -21,6 +21,7 @@
 		F93494591D91E20800D4FDA5 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93494501D91E20800D4FDA5 /* Random.swift */; };
 		F934945B1D91E20800D4FDA5 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93494521D91E20800D4FDA5 /* Storage.swift */; };
 		F934945C1D91E20800D4FDA5 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93494531D91E20800D4FDA5 /* Vector.swift */; };
+		F934945E1D91EE3100D4FDA5 /* MotionKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F934945D1D91EE3100D4FDA5 /* MotionKit.swift */; };
 		F9D73CDD1D91B9DF00A26FF4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D73CDC1D91B9DF00A26FF4 /* Extensions.swift */; };
 		F9D73CE01D91C43600A26FF4 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D73CDF1D91C43600A26FF4 /* Log.swift */; };
 		F9FFDF2E1D90747E00F63E96 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FFDF2D1D90747E00F63E96 /* LogViewController.swift */; };
@@ -47,6 +48,7 @@
 		F93494501D91E20800D4FDA5 /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
 		F93494521D91E20800D4FDA5 /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		F93494531D91E20800D4FDA5 /* Vector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector.swift; sourceTree = "<group>"; };
+		F934945D1D91EE3100D4FDA5 /* MotionKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionKit.swift; sourceTree = "<group>"; };
 		F9D73CDC1D91B9DF00A26FF4 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F9D73CDF1D91C43600A26FF4 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		F9FFDF2D1D90747E00F63E96 /* LogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				F934944B1D91E20800D4FDA5 /* SwiftAI */,
+				F934945D1D91EE3100D4FDA5 /* MotionKit.swift */,
 				F9D73CDC1D91B9DF00A26FF4 /* Extensions.swift */,
 			);
 			name = Utilities;
@@ -291,6 +294,7 @@
 				F9FFDF2E1D90747E00F63E96 /* LogViewController.swift in Sources */,
 				F934945C1D91E20800D4FDA5 /* Vector.swift in Sources */,
 				F93494591D91E20800D4FDA5 /* Random.swift in Sources */,
+				F934945E1D91EE3100D4FDA5 /* MotionKit.swift in Sources */,
 				F927B47F1D8F154300F4D297 /* ModelController.swift in Sources */,
 				F9FFDF321D9074BF00F63E96 /* SessionViewController.swift in Sources */,
 				F927B4791D8F154300F4D297 /* AppDelegate.swift in Sources */,

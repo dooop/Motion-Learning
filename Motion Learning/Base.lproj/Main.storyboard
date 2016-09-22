@@ -113,19 +113,37 @@
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qny-T0-HM1">
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        <state key="normal" title="TRAIN">
+                                        <state key="normal" title="LOAD WEIGHTS">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </state>
                                         <connections>
-                                            <action selector="train:" destination="Tic-IV-5fr" eventType="touchUpInside" id="GBr-c8-ot3"/>
+                                            <action selector="loadWeights:" destination="Tic-IV-5fr" eventType="touchUpInside" id="7Cq-FX-CCZ"/>
                                         </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEw-21-a0n">
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="STAND">
+                                            <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWt-xV-dgq">
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="WALK">
+                                            <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPy-Dy-hXG">
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="PUSH">
+                                            <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        </state>
                                     </button>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="BKX-s3-XjB" firstAttribute="centerY" secondItem="2XA-0C-hia" secondAttribute="centerY" id="2JU-cy-iRS"/>
+                            <constraint firstItem="PlF-Hl-jL0" firstAttribute="centerY" secondItem="2XA-0C-hia" secondAttribute="centerY" id="J8m-Sg-ct0"/>
                             <constraint firstItem="BKX-s3-XjB" firstAttribute="centerX" secondItem="2XA-0C-hia" secondAttribute="centerX" id="e3X-QX-YkW"/>
                             <constraint firstItem="BKX-s3-XjB" firstAttribute="width" secondItem="2XA-0C-hia" secondAttribute="width" constant="-40" id="oto-Wk-FcU"/>
                         </constraints>
@@ -135,6 +153,9 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="activityIndicator" destination="1vN-xH-5le" id="8WN-Hp-yWh"/>
+                        <outlet property="pushButton" destination="DPy-Dy-hXG" id="anW-mj-BTH"/>
+                        <outlet property="standButton" destination="dEw-21-a0n" id="hd5-7S-JQm"/>
+                        <outlet property="walkButton" destination="GWt-xV-dgq" id="IK1-Eq-mS1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j6O-rF-HJN" userLabel="First Responder" sceneMemberID="firstResponder"/>

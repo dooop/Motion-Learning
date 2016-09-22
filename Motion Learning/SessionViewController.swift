@@ -17,8 +17,9 @@ class SessionViewController: UIViewController {
         activityIndicator.alpha = 0
     }
     
-    func detect(sequence: [CMDeviceMotion]) {
-        MotionDetector.shared.detect(sequence: sequence)
+    func analyse(sequence: [CMDeviceMotion]) {
+        let type = MotionDetector.shared.detect(sequence: sequence)
+        Log.shared.write(entry: "\(type?.rawValue.uppercased() ?? "NOTHING") detected")
     }
     
     // MARK: - Button actions
@@ -26,7 +27,7 @@ class SessionViewController: UIViewController {
     @IBAction func start(_ sender: UIButton) {
         activityIndicator.show()
         
-        MotionRecorder.shared.startRecording(onSequenceRecorded: detect)
+        MotionRecorder.shared.startRecording(onSequenceRecorded: analyse)
     }
     
     @IBAction func stop(_ sender: UIButton) {

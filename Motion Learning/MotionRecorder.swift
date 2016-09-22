@@ -15,15 +15,15 @@ class MotionRecorder {
     
     private let manager = CMMotionManager()
     
-    private let updatesPerSecond: Double = 50.0
+    private let sequenceCount: Int
     private let sequenceDuration: TimeInterval = 3.0
-    private let sequenceLength: Int
+    private let updatesPerSecond: Double = 50.0
     
-    private var record: [CMDeviceMotion] = []
     private(set) var sequences: [[CMDeviceMotion]] = []
+    private var record: [CMDeviceMotion] = []
     
     init() {
-        sequenceLength = Int(updatesPerSecond * sequenceDuration)
+        sequenceCount = Int(updatesPerSecond * sequenceDuration)
         manager.deviceMotionUpdateInterval = 1 / updatesPerSecond
     }
     
@@ -42,7 +42,7 @@ class MotionRecorder {
             
             self.record.append(motion)
             
-            if self.record.count >= self.sequenceLength {
+            if self.record.count >= self.sequenceCount {
                 self.sequences.append(self.record)
                 onSequenceRecorded(self.record)
                 self.record.removeAll()

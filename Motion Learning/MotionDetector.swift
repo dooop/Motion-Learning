@@ -17,7 +17,8 @@ class MotionDetector {
         // TODO
     }
     
-    func detect(sequence: [CMDeviceMotion]) {
-        Log.shared.write(entry: "SEQUENCE COUNT: \(sequence.count)")
+    func detect(sequence: [CMDeviceMotion]) -> MotionType? {
+        
+        return nil
     }
 }

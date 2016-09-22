@@ -23,6 +23,7 @@
 		F934945C1D91E20800D4FDA5 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93494531D91E20800D4FDA5 /* Vector.swift */; };
 		F93494601D92654A00D4FDA5 /* MotionDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F934945F1D92654A00D4FDA5 /* MotionDetector.swift */; };
 		F97F80D61D945CA100874718 /* MotionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97F80D51D945CA100874718 /* MotionType.swift */; };
+		F97F80DA1D94926D00874718 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97F80D91D94926D00874718 /* Calculator.swift */; };
 		F9B184891D9325E200EF6FD0 /* MotionRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B184881D9325E200EF6FD0 /* MotionRecorder.swift */; };
 		F9D73CDD1D91B9DF00A26FF4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D73CDC1D91B9DF00A26FF4 /* Extensions.swift */; };
 		F9D73CE01D91C43600A26FF4 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D73CDF1D91C43600A26FF4 /* Log.swift */; };
@@ -52,6 +53,7 @@
 		F93494531D91E20800D4FDA5 /* Vector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector.swift; sourceTree = "<group>"; };
 		F934945F1D92654A00D4FDA5 /* MotionDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionDetector.swift; sourceTree = "<group>"; };
 		F97F80D51D945CA100874718 /* MotionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionType.swift; sourceTree = "<group>"; };
+		F97F80D91D94926D00874718 /* Calculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		F9B184881D9325E200EF6FD0 /* MotionRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionRecorder.swift; sourceTree = "<group>"; };
 		F9D73CDC1D91B9DF00A26FF4 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F9D73CDF1D91C43600A26FF4 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			children = (
 				F934944B1D91E20800D4FDA5 /* SwiftAI */,
 				F9D73CDC1D91B9DF00A26FF4 /* Extensions.swift */,
+				F97F80D91D94926D00874718 /* Calculator.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 			files = (
 				F9FFDF301D9074A400F63E96 /* AnimationViewController.swift in Sources */,
 				F93494551D91E20800D4FDA5 /* FFNN+Storage.swift in Sources */,
+				F97F80DA1D94926D00874718 /* Calculator.swift in Sources */,
 				F927B47B1D8F154300F4D297 /* RootViewController.swift in Sources */,
 				F93494581D91E20800D4FDA5 /* Operations.swift in Sources */,
 				F93494561D91E20800D4FDA5 /* FFNN.swift in Sources */,

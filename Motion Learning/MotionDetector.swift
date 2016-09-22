@@ -8,7 +8,6 @@
 
 import Foundation
 import CoreMotion
-import Accelerate
 
 class MotionDetector {
     
@@ -55,4 +54,6 @@ class MotionDetector {
     func inputs(for sequence: [CMDeviceMotion]) -> [Float] {
         return []
     }
+    
+    
 }

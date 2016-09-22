@@ -14,6 +14,10 @@ enum MotionType: String {
     
     static let all = [standing, walking, pushing]
     
+    static var weights: [Float]? {
+        return nil
+    }
+    
     var output: [Float] {
         switch self {
         case .standing:

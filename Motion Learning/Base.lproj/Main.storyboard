@@ -40,17 +40,18 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QDD-h9-bfU">
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZeH-dG-qeC">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZeH-dG-qeC">
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="ZeH-dG-qeC" firstAttribute="trailing" secondItem="QDD-h9-bfU" secondAttribute="trailing" constant="-20" id="0Ze-si-K1B"/>
                                     <constraint firstItem="ZeH-dG-qeC" firstAttribute="bottom" secondItem="QDD-h9-bfU" secondAttribute="bottom" constant="-20" id="0wp-QY-api"/>
-                                    <constraint firstItem="ZeH-dG-qeC" firstAttribute="leading" secondItem="QDD-h9-bfU" secondAttribute="leading" constant="20" id="fwR-Md-RcW"/>
+                                    <constraint firstItem="ZeH-dG-qeC" firstAttribute="leading" secondItem="QDD-h9-bfU" secondAttribute="leading" constant="20" id="KZ4-hk-6Jc"/>
+                                    <constraint firstItem="ZeH-dG-qeC" firstAttribute="width" secondItem="QDD-h9-bfU" secondAttribute="width" constant="-40" id="hlT-GU-DTQ"/>
                                     <constraint firstItem="ZeH-dG-qeC" firstAttribute="top" secondItem="QDD-h9-bfU" secondAttribute="top" constant="20" id="vBp-hr-Vr9"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZeH-dG-qeC" secondAttribute="trailing" constant="-20" id="w9h-Qg-6RN"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -125,18 +126,27 @@
                                         <state key="normal" title="STAND">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="add:" destination="Tic-IV-5fr" eventType="touchUpInside" id="L6g-e7-maZ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWt-xV-dgq">
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <state key="normal" title="WALK">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="add:" destination="Tic-IV-5fr" eventType="touchUpInside" id="meg-23-pGB"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPy-Dy-hXG">
                                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                         <state key="normal" title="PUSH">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="add:" destination="Tic-IV-5fr" eventType="touchUpInside" id="7u5-C8-EaJ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

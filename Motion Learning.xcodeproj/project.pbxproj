@@ -21,7 +21,7 @@
 		F93494591D91E20800D4FDA5 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93494501D91E20800D4FDA5 /* Random.swift */; };
 		F934945B1D91E20800D4FDA5 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93494521D91E20800D4FDA5 /* Storage.swift */; };
 		F934945C1D91E20800D4FDA5 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93494531D91E20800D4FDA5 /* Vector.swift */; };
-		F93494601D92654A00D4FDA5 /* MotionRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F934945F1D92654A00D4FDA5 /* MotionRecognizer.swift */; };
+		F93494601D92654A00D4FDA5 /* MotionDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F934945F1D92654A00D4FDA5 /* MotionDetector.swift */; };
 		F9B184891D9325E200EF6FD0 /* MotionRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B184881D9325E200EF6FD0 /* MotionRecorder.swift */; };
 		F9D73CDD1D91B9DF00A26FF4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D73CDC1D91B9DF00A26FF4 /* Extensions.swift */; };
 		F9D73CE01D91C43600A26FF4 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D73CDF1D91C43600A26FF4 /* Log.swift */; };
@@ -49,7 +49,7 @@
 		F93494501D91E20800D4FDA5 /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
 		F93494521D91E20800D4FDA5 /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		F93494531D91E20800D4FDA5 /* Vector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector.swift; sourceTree = "<group>"; };
-		F934945F1D92654A00D4FDA5 /* MotionRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionRecognizer.swift; sourceTree = "<group>"; };
+		F934945F1D92654A00D4FDA5 /* MotionDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionDetector.swift; sourceTree = "<group>"; };
 		F9B184881D9325E200EF6FD0 /* MotionRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionRecorder.swift; sourceTree = "<group>"; };
 		F9D73CDC1D91B9DF00A26FF4 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F9D73CDF1D91C43600A26FF4 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
@@ -149,7 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				F9D73CDF1D91C43600A26FF4 /* Log.swift */,
-				F934945F1D92654A00D4FDA5 /* MotionRecognizer.swift */,
+				F934945F1D92654A00D4FDA5 /* MotionDetector.swift */,
 				F9B184881D9325E200EF6FD0 /* MotionRecorder.swift */,
 			);
 			name = Shared;
@@ -300,7 +300,7 @@
 				F927B47F1D8F154300F4D297 /* ModelController.swift in Sources */,
 				F9FFDF321D9074BF00F63E96 /* SessionViewController.swift in Sources */,
 				F927B4791D8F154300F4D297 /* AppDelegate.swift in Sources */,
-				F93494601D92654A00D4FDA5 /* MotionRecognizer.swift in Sources */,
+				F93494601D92654A00D4FDA5 /* MotionDetector.swift in Sources */,
 				F93494571D91E20800D4FDA5 /* Matrix.swift in Sources */,
 				F9D73CE01D91C43600A26FF4 /* Log.swift in Sources */,
 				F934945B1D91E20800D4FDA5 /* Storage.swift in Sources */,

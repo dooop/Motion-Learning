@@ -13,7 +13,6 @@ class LogViewController: UIViewController {
     @IBOutlet weak var logLabel: UILabel!
     
     override func viewDidLoad() {
-        
         updateLog(with: Log.shared.entries)
         
         Log.shared.entryWritten = updateLog
@@ -34,5 +33,6 @@ class LogViewController: UIViewController {
     private func setLabel(with log: String) {
         logLabel.text = log
         logLabel.sizeToFit()
+        logLabel.layoutIfNeeded()
     }
 }

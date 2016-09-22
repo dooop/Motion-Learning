@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreMotion
 
 class SessionViewController: UIViewController {
     
@@ -16,18 +17,22 @@ class SessionViewController: UIViewController {
         activityIndicator.alpha = 0
     }
     
+    func detect(sequence: [CMDeviceMotion]) {
+        MotionDetector.shared.detect(sequence: sequence)
+    }
+    
     // MARK: - Button actions
     
     @IBAction func start(_ sender: UIButton) {
         activityIndicator.show()
         
-        MotionDetector.shared.startSession()
+        MotionRecorder.shared.startRecording(onSequenceRecorded: detect)
     }
     
     @IBAction func stop(_ sender: UIButton) {
         activityIndicator.hide()
         
-        MotionDetector.shared.stopSession()
+        MotionRecorder.shared.stopRecording()
     }
     
     @IBAction func train(_ sender: UIButton) {

@@ -22,14 +22,12 @@ class MotionRecorder {
     private var record: [CMDeviceMotion] = []
     private(set) var sequences: [[CMDeviceMotion]] = []
     
-    var sequenceRecorded: (([CMDeviceMotion]) -> Void)?
-    
     init() {
         sequenceLength = Int(updatesPerSecond * sequenceDuration)
         manager.deviceMotionUpdateInterval = 1 / updatesPerSecond
     }
     
-    func startRecording() {
+    func startRecording(onSequenceRecorded: @escaping ([CMDeviceMotion]) -> Void) {
         guard manager.isDeviceMotionAvailable else {
             return
         }
@@ -46,7 +44,7 @@ class MotionRecorder {
             
             if self.record.count >= self.sequenceLength {
                 self.sequences.append(self.record)
-                self.sequenceRecorded?(self.record)
+                onSequenceRecorded(self.record)
                 self.record.removeAll()
             }
         }

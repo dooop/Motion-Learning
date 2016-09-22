@@ -9,24 +9,15 @@
 import Foundation
 import CoreMotion
 
-class MotionRecognizer {
+class MotionDetector {
     
-    static let shared = MotionRecognizer()
-    
-    func startSession() {
-        MotionRecorder.shared.sequenceRecorded = detect
-        MotionRecorder.shared.startRecording()
-    }
-    
-    func stopSession() {
-        MotionRecorder.shared.stopRecording()
-    }
+    static let shared = MotionDetector()
     
     func train() {
         // TODO
     }
     
-    private func detect(sequence: [CMDeviceMotion]) {
+    func detect(sequence: [CMDeviceMotion]) {
         Log.shared.write(entry: "SEQUENCE COUNT: \(sequence.count)")
     }
 }

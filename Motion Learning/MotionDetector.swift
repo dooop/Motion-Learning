@@ -52,8 +52,31 @@ class MotionDetector {
     }
     
     func inputs(for sequence: [CMDeviceMotion]) -> [Float] {
-        return []
+        var inputs = [Float]()
+        
+        var accelerationX  = [Float]()
+        var accelerationY  = [Float]()
+        var accelerationZ  = [Float]()
+        
+        sequence.forEach { motion in
+            accelerationX.append(Float(motion.userAcceleration.x))
+            accelerationY.append(Float(motion.userAcceleration.y))
+            accelerationZ.append(Float(motion.userAcceleration.z))
+        }
+        
+        inputs.append(Calculator.average(of: accelerationX))
+        inputs.append(Calculator.average(of: accelerationY))
+        inputs.append(Calculator.average(of: accelerationZ))
+        inputs.append(Calculator.standardDeviation(of: accelerationX))
+        inputs.append(Calculator.standardDeviation(of: accelerationY))
+        inputs.append(Calculator.standardDeviation(of: accelerationZ))
+        inputs.append(Calculator.energy(of: accelerationX))
+        inputs.append(Calculator.energy(of: accelerationY))
+        inputs.append(Calculator.energy(of: accelerationZ))
+        inputs.append(accelerationX.max() ?? 0)
+        inputs.append(accelerationY.max() ?? 0)
+        inputs.append(accelerationZ.max() ?? 0)
+        
+        return inputs
     }
-    
-    
 }

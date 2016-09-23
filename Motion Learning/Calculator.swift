@@ -50,14 +50,13 @@ class Calculator {
     }
     
     static func variance(of values: [Float]) -> Float {
-        
         let average = self.average(of: values)
-        
         var sum: Float = 0.0
         for value in values {
             sum += powf(value - average, 2)
         }
         let variance: Float = sum / Float(values.count)
+        
         return variance
     }
     
@@ -67,6 +66,18 @@ class Calculator {
             sum += value
         }
         let average: Float = sum / Float(values.count)
+        
         return average
+    }
+    
+    static func energy(of values: [Float]) -> Float {
+        let fft = self.fastFourierTransformation(of: values)
+        var sum: Float = 0.0
+        for value in fft {
+            sum += powf(value, 2)
+        }
+        let energy: Float = sum / Float(values.count)
+        
+        return energy
     }
 }

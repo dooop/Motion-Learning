@@ -28,7 +28,7 @@
 		F9D73CDD1D91B9DF00A26FF4 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D73CDC1D91B9DF00A26FF4 /* Extensions.swift */; };
 		F9D73CE01D91C43600A26FF4 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9D73CDF1D91C43600A26FF4 /* Log.swift */; };
 		F9FFDF2E1D90747E00F63E96 /* LogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FFDF2D1D90747E00F63E96 /* LogViewController.swift */; };
-		F9FFDF301D9074A400F63E96 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FFDF2F1D9074A400F63E96 /* AnimationViewController.swift */; };
+		F9FFDF301D9074A400F63E96 /* TrainingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FFDF2F1D9074A400F63E96 /* TrainingViewController.swift */; };
 		F9FFDF321D9074BF00F63E96 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FFDF311D9074BF00F63E96 /* SessionViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +58,7 @@
 		F9D73CDC1D91B9DF00A26FF4 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F9D73CDF1D91C43600A26FF4 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		F9FFDF2D1D90747E00F63E96 /* LogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogViewController.swift; sourceTree = "<group>"; };
-		F9FFDF2F1D9074A400F63E96 /* AnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
+		F9FFDF2F1D9074A400F63E96 /* TrainingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrainingViewController.swift; sourceTree = "<group>"; };
 		F9FFDF311D9074BF00F63E96 /* SessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -165,8 +165,8 @@
 			isa = PBXGroup;
 			children = (
 				F9FFDF2D1D90747E00F63E96 /* LogViewController.swift */,
+				F9FFDF2F1D9074A400F63E96 /* TrainingViewController.swift */,
 				F9FFDF311D9074BF00F63E96 /* SessionViewController.swift */,
-				F9FFDF2F1D9074A400F63E96 /* AnimationViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -295,7 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F9FFDF301D9074A400F63E96 /* AnimationViewController.swift in Sources */,
+				F9FFDF301D9074A400F63E96 /* TrainingViewController.swift in Sources */,
 				F93494551D91E20800D4FDA5 /* FFNN+Storage.swift in Sources */,
 				F97F80DA1D94926D00874718 /* Calculator.swift in Sources */,
 				F927B47B1D8F154300F4D297 /* RootViewController.swift in Sources */,

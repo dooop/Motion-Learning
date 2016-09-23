@@ -1,5 +1,5 @@
 //
-//  AnimationViewController.swift
+//  TrainingViewController.swift
 //  Motion Learning
 //
 //  Created by Dominic Opitz on 19.09.16.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-class AnimationViewController: UIViewController {
+class TrainingViewController: UIViewController {
     
 }

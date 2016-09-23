@@ -172,10 +172,10 @@
             </objects>
             <point key="canvasLocation" x="713" y="-243"/>
         </scene>
-        <!--Animation View Controller-->
+        <!--Training View Controller-->
         <scene sceneID="KaW-bA-P1L">
             <objects>
-                <viewController storyboardIdentifier="AnimationViewController" id="rOY-OO-Sti" customClass="AnimationViewController" customModule="Motion_Learning" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TrainingViewController" id="rOY-OO-Sti" customClass="TrainingViewController" customModule="Motion_Learning" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tLU-SP-HCc"/>
                         <viewControllerLayoutGuide type="bottom" id="2Y2-77-MrC"/>

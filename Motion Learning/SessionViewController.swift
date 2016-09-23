@@ -48,9 +48,9 @@ class SessionViewController: UIViewController {
     }
     
     @IBAction func loadWeights(_ sender: UIButton) {
-        let success = MotionDetector.shared.loadWeights()
+        let success = MotionDetector.shared.resetWeights()
         
-        Log.shared.write(entry: "Loading weights \(success ? "succeeded" : "failed")")
+        Log.shared.write(entry: "Reset weights \(success ? "succeeded" : "failed")")
     }
     
     @IBAction func add(_ sender: UIButton) {

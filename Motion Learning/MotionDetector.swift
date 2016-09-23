@@ -13,20 +13,16 @@ class MotionDetector {
     
     static let shared = MotionDetector()
     
-    static let inputCount = 9
+    static let inputCount = 12
     static let outputCount = MotionType.all.count
     static let hidden = (inputCount * 2 / 3) + outputCount
     
     private let neuralNetwork =
-        FFNN(inputs: inputCount, hidden: hidden, outputs: outputCount, learningRate: 0.7, momentum: 0.4, weights: nil, activationFunction: .Sigmoid, errorFunction: .CrossEntropy(average: false))
+        FFNN(inputs: inputCount, hidden: hidden, outputs: outputCount, learningRate: 0.7, momentum: 0.4, weights: MotionType.weights, activationFunction: .Sigmoid, errorFunction: .CrossEntropy(average: false))
     
-    func loadWeights() -> Bool {
-        guard let weights = MotionType.weights else {
-            return false
-        }
-        
+    func resetWeights() -> Bool {
         do {
-            try neuralNetwork.resetWithWeights(weights: weights)
+            try neuralNetwork.resetWithWeights(weights: MotionType.weights)
             return true
         }
         catch {

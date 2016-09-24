@@ -22,3 +22,17 @@ extension UIView {
         }
     }
 }
+
+extension CALayer {
+    func fade(to opacity: CGFloat) {
+        let animation = CABasicAnimation(keyPath: "opacity")
+        animation.fromValue = self.opacity
+        animation.toValue = opacity
+        animation.duration = 0.42
+        animation.repeatCount = 0
+        animation.fillMode = kCAFillModeForwards
+        animation.isRemovedOnCompletion = false
+        
+        self.add(animation, forKey: "opacity")
+    }
+}

@@ -20,6 +20,7 @@ class SessionViewController: UIViewController {
     
     private var detectedMotion: MotionType? {
         didSet {
+            animationViewController?.showAnimation(for: detectedMotion)
             icons.values.forEach({ $0.isHighlighted = false })
             
             if let type = detectedMotion {
@@ -28,9 +29,10 @@ class SessionViewController: UIViewController {
         }
     }
     
-    override func performSegue(withIdentifier identifier: String, sender: Any?) {
-        if identifier == "animationViewController" {
-            animationViewController = sender as? AnimationViewController
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "animationViewController" {
+            animationViewController = segue.destination as? AnimationViewController
+            animationViewController?.loadAnimations()
         }
     }
     
@@ -42,14 +44,13 @@ class SessionViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         MotionRecorder.shared.startRecording(onSequenceRecorded: analyse)
-        
-        Log.shared.write(entry: "Start recording")
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
+    override func viewDidDisappear(_ animated: Bool) {
         MotionRecorder.shared.stopRecording()
         
-        Log.shared.write(entry: "Stop recording")
+        print("did disappear")
+        detectedMotion = nil
     }
     
     func analyse(sequence: [CMDeviceMotion]) {

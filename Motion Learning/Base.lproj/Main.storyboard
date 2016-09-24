@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -92,11 +93,11 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BKX-s3-XjB">
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEw-21-a0n">
-                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
-                                        <state key="normal" image="Standing">
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="60" maxY="0.0"/>
+                                        <state key="normal" image="StandingIcon">
                                             <color key="titleColor" red="0.26666666666666666" green="0.6705882352941176" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
-                                        <state key="highlighted" image="StandingPress">
+                                        <state key="highlighted" image="StandingIcon-Blue">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </state>
                                         <connections>
@@ -104,21 +105,21 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWt-xV-dgq">
-                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
-                                        <state key="normal" image="Walking">
+                                        <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="20" maxY="0.0"/>
+                                        <state key="normal" image="WalkingIcon">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </state>
-                                        <state key="highlighted" image="WalkingPress"/>
+                                        <state key="highlighted" image="WalkingIcon-Blue"/>
                                         <connections>
                                             <action selector="walk:" destination="Tic-IV-5fr" eventType="touchUpInside" id="VsH-ff-mtv"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPy-Dy-hXG">
                                         <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
-                                        <state key="normal" image="Pushing">
+                                        <state key="normal" image="PushingIcon">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </state>
-                                        <state key="highlighted" image="PushingPress"/>
+                                        <state key="highlighted" image="PushingIcon-Blue"/>
                                         <connections>
                                             <action selector="push:" destination="Tic-IV-5fr" eventType="touchUpInside" id="QI4-GL-4A0"/>
                                         </connections>
@@ -130,7 +131,7 @@
                         <constraints>
                             <constraint firstItem="1vN-xH-5le" firstAttribute="top" secondItem="vqc-Yt-gVO" secondAttribute="bottom" constant="16" id="4X5-iW-th1"/>
                             <constraint firstItem="1vN-xH-5le" firstAttribute="leading" secondItem="2XA-0C-hia" secondAttribute="leadingMargin" id="99c-mt-kZF"/>
-                            <constraint firstItem="BKX-s3-XjB" firstAttribute="height" secondItem="2XA-0C-hia" secondAttribute="height" id="has-Jv-shC"/>
+                            <constraint firstItem="BKX-s3-XjB" firstAttribute="height" secondItem="2XA-0C-hia" secondAttribute="height" constant="-40" id="has-Jv-shC"/>
                             <constraint firstItem="BKX-s3-XjB" firstAttribute="centerX" secondItem="2XA-0C-hia" secondAttribute="centerX" id="iPk-1H-Ffl"/>
                             <constraint firstItem="BKX-s3-XjB" firstAttribute="centerY" secondItem="2XA-0C-hia" secondAttribute="centerY" id="ier-Ma-Lfd"/>
                         </constraints>
@@ -163,26 +164,66 @@
                                     <segue destination="RnI-YI-Yjw" kind="embed" identifier="animationViewController" id="EEQ-5t-hGA"/>
                                 </connections>
                             </containerView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kq0-x3-WDE">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Kq0-x3-WDE">
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BHh-cc-jzF" userLabel="Standing Container">
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StandingIcon" highlightedImage="StandingIcon-Blue" translatesAutoresizingMaskIntoConstraints="NO" id="t7q-be-aon"/>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="t7q-be-aon" firstAttribute="centerX" secondItem="BHh-cc-jzF" secondAttribute="centerX" id="3ET-vs-ish"/>
+                                            <constraint firstItem="t7q-be-aon" firstAttribute="height" secondItem="BHh-cc-jzF" secondAttribute="height" id="BeF-r7-Th9"/>
+                                            <constraint firstItem="t7q-be-aon" firstAttribute="centerY" secondItem="BHh-cc-jzF" secondAttribute="centerY" id="Bj2-d6-enV"/>
+                                            <constraint firstItem="t7q-be-aon" firstAttribute="width" secondItem="BHh-cc-jzF" secondAttribute="width" id="VhY-9z-Uer"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SN9-EX-0Hc" userLabel="Walking Container">
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WalkingIcon" highlightedImage="WalkingIcon-Blue" translatesAutoresizingMaskIntoConstraints="NO" id="RPc-xB-NmV"/>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="RPc-xB-NmV" firstAttribute="centerX" secondItem="SN9-EX-0Hc" secondAttribute="centerX" id="FfW-sz-jzJ"/>
+                                            <constraint firstItem="RPc-xB-NmV" firstAttribute="width" secondItem="SN9-EX-0Hc" secondAttribute="width" id="HJZ-OZ-fDN"/>
+                                            <constraint firstItem="RPc-xB-NmV" firstAttribute="centerY" secondItem="SN9-EX-0Hc" secondAttribute="centerY" id="eyO-KV-mks"/>
+                                            <constraint firstItem="RPc-xB-NmV" firstAttribute="height" secondItem="SN9-EX-0Hc" secondAttribute="height" id="hDx-DD-52j"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WsV-aX-oMZ" userLabel="Pushing Container">
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PushingIcon" highlightedImage="PushingIcon-Blue" translatesAutoresizingMaskIntoConstraints="NO" id="hzo-tN-vHn"/>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="hzo-tN-vHn" firstAttribute="height" secondItem="WsV-aX-oMZ" secondAttribute="height" multiplier="0.86" id="17T-OG-Fwc"/>
+                                            <constraint firstItem="hzo-tN-vHn" firstAttribute="width" secondItem="WsV-aX-oMZ" secondAttribute="width" id="4bd-hb-buF"/>
+                                            <constraint firstItem="hzo-tN-vHn" firstAttribute="bottom" secondItem="WsV-aX-oMZ" secondAttribute="bottom" id="Fd8-yX-deJ"/>
+                                            <constraint firstItem="hzo-tN-vHn" firstAttribute="centerX" secondItem="WsV-aX-oMZ" secondAttribute="centerX" id="WfF-WF-q6F"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="nk3-Bd-UBa"/>
+                                    <constraint firstAttribute="height" constant="80" id="nk3-Bd-UBa"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Kq0-x3-WDE" firstAttribute="bottom" secondItem="2Y2-77-MrC" secondAttribute="top" id="6cG-hg-rc1"/>
-                            <constraint firstItem="Kq0-x3-WDE" firstAttribute="width" secondItem="RLo-kJ-MAg" secondAttribute="width" id="Bn0-92-6qa"/>
+                            <constraint firstItem="Kq0-x3-WDE" firstAttribute="bottom" secondItem="2Y2-77-MrC" secondAttribute="top" constant="-20" id="6cG-hg-rc1"/>
+                            <constraint firstItem="Kq0-x3-WDE" firstAttribute="width" secondItem="RLo-kJ-MAg" secondAttribute="width" constant="-40" id="Bn0-92-6qa"/>
                             <constraint firstItem="Kq0-x3-WDE" firstAttribute="centerX" secondItem="RLo-kJ-MAg" secondAttribute="centerX" id="Xug-DN-Kb7"/>
                             <constraint firstItem="3wP-Yw-vAA" firstAttribute="height" secondItem="RLo-kJ-MAg" secondAttribute="height" id="ZL1-ka-TKG"/>
                             <constraint firstItem="3wP-Yw-vAA" firstAttribute="width" secondItem="RLo-kJ-MAg" secondAttribute="width" id="oG9-0h-Asq"/>
                             <constraint firstItem="3wP-Yw-vAA" firstAttribute="centerX" secondItem="RLo-kJ-MAg" secondAttribute="centerX" id="uHc-ka-720"/>
-                            <constraint firstItem="3wP-Yw-vAA" firstAttribute="bottom" secondItem="Kq0-x3-WDE" secondAttribute="top" id="z1t-HA-aLG"/>
+                            <constraint firstItem="3wP-Yw-vAA" firstAttribute="bottom" secondItem="Kq0-x3-WDE" secondAttribute="top" constant="-20" id="z1t-HA-aLG"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="pushingIcon" destination="hzo-tN-vHn" id="jLX-eh-4Lm"/>
+                        <outlet property="standingIcon" destination="t7q-be-aon" id="M78-Dv-3zZ"/>
+                        <outlet property="walkingIcon" destination="RPc-xB-NmV" id="ank-L1-NG7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eFC-tq-YOj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -211,11 +252,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Pushing" width="118" height="157"/>
-        <image name="PushingPress" width="118" height="157"/>
-        <image name="Standing" width="135" height="183"/>
-        <image name="StandingPress" width="135" height="183"/>
-        <image name="Walking" width="87" height="183"/>
-        <image name="WalkingPress" width="87" height="183"/>
+        <image name="PushingIcon" width="118" height="157"/>
+        <image name="PushingIcon-Blue" width="118" height="157"/>
+        <image name="StandingIcon" width="135" height="183"/>
+        <image name="StandingIcon-Blue" width="135" height="183"/>
+        <image name="WalkingIcon" width="87" height="183"/>
+        <image name="WalkingIcon-Blue" width="87" height="183"/>
     </resources>
 </document>

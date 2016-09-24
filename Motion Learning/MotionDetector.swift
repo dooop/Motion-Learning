@@ -34,7 +34,7 @@ class MotionDetector {
         return try? neuralNetwork.update(inputs: inputs)
     }
     
-    func add(inputs: [Float], for type: MotionType) -> Float? {
+    func train(inputs: [Float], for type: MotionType) -> Float? {
         _ = try? neuralNetwork.update(inputs: inputs)
         return try? neuralNetwork.backpropagate(answer: type.output)
     }

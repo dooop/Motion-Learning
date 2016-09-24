@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -75,10 +76,10 @@
             </objects>
             <point key="canvasLocation" x="712.79999999999995" y="-927.88605697151434"/>
         </scene>
-        <!--Session View Controller-->
+        <!--Training View Controller-->
         <scene sceneID="IjS-bV-HHK">
             <objects>
-                <viewController storyboardIdentifier="SessionViewController" id="Tic-IV-5fr" customClass="SessionViewController" customModule="Motion_Learning" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TrainingViewController" id="Tic-IV-5fr" customClass="TrainingViewController" customModule="Motion_Learning" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vqc-Yt-gVO"/>
                         <viewControllerLayoutGuide type="bottom" id="oLU-wz-T4X"/>
@@ -87,65 +88,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="BKX-s3-XjB">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="1vN-xH-5le"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BKX-s3-XjB">
                                 <subviews>
-                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="1vN-xH-5le"/>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="PlF-Hl-jL0">
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8z8-qP-EHw">
-                                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
-                                                <state key="normal" title="START">
-                                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="start:" destination="Tic-IV-5fr" eventType="touchUpInside" id="ynF-f8-fi3"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIt-oO-iz5">
-                                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
-                                                <state key="normal" title="STOP">
-                                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="stop:" destination="Tic-IV-5fr" eventType="touchUpInside" id="gKO-ro-bgp"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qny-T0-HM1">
-                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        <state key="normal" title="LOAD WEIGHTS">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEw-21-a0n">
+                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                        <state key="normal" image="Standing">
+                                            <color key="titleColor" red="0.26666666666666666" green="0.6705882352941176" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="highlighted" image="StandingPress">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </state>
                                         <connections>
-                                            <action selector="loadWeights:" destination="Tic-IV-5fr" eventType="touchUpInside" id="7Cq-FX-CCZ"/>
+                                            <action selector="stand:" destination="Tic-IV-5fr" eventType="touchUpInside" id="8jE-il-ARL"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEw-21-a0n">
-                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        <state key="normal" title="STAND">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWt-xV-dgq">
+                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                        <state key="normal" image="Walking">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </state>
+                                        <state key="highlighted" image="WalkingPress"/>
                                         <connections>
-                                            <action selector="add:" destination="Tic-IV-5fr" eventType="touchUpInside" id="L6g-e7-maZ"/>
+                                            <action selector="walk:" destination="Tic-IV-5fr" eventType="touchUpInside" id="VsH-ff-mtv"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWt-xV-dgq">
-                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        <state key="normal" title="WALK">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPy-Dy-hXG">
+                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                        <state key="normal" image="Pushing">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </state>
+                                        <state key="highlighted" image="PushingPress"/>
                                         <connections>
-                                            <action selector="add:" destination="Tic-IV-5fr" eventType="touchUpInside" id="meg-23-pGB"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DPy-Dy-hXG">
-                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                        <state key="normal" title="PUSH">
-                                            <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="add:" destination="Tic-IV-5fr" eventType="touchUpInside" id="7u5-C8-EaJ"/>
+                                            <action selector="push:" destination="Tic-IV-5fr" eventType="touchUpInside" id="QI4-GL-4A0"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -153,29 +128,28 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="PlF-Hl-jL0" firstAttribute="centerY" secondItem="2XA-0C-hia" secondAttribute="centerY" id="J8m-Sg-ct0"/>
-                            <constraint firstItem="BKX-s3-XjB" firstAttribute="centerX" secondItem="2XA-0C-hia" secondAttribute="centerX" id="e3X-QX-YkW"/>
-                            <constraint firstItem="BKX-s3-XjB" firstAttribute="width" secondItem="2XA-0C-hia" secondAttribute="width" constant="-40" id="oto-Wk-FcU"/>
+                            <constraint firstItem="1vN-xH-5le" firstAttribute="top" secondItem="vqc-Yt-gVO" secondAttribute="bottom" constant="16" id="4X5-iW-th1"/>
+                            <constraint firstItem="1vN-xH-5le" firstAttribute="leading" secondItem="2XA-0C-hia" secondAttribute="leadingMargin" id="99c-mt-kZF"/>
+                            <constraint firstItem="BKX-s3-XjB" firstAttribute="height" secondItem="2XA-0C-hia" secondAttribute="height" id="has-Jv-shC"/>
+                            <constraint firstItem="BKX-s3-XjB" firstAttribute="centerX" secondItem="2XA-0C-hia" secondAttribute="centerX" id="iPk-1H-Ffl"/>
+                            <constraint firstItem="BKX-s3-XjB" firstAttribute="centerY" secondItem="2XA-0C-hia" secondAttribute="centerY" id="ier-Ma-Lfd"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="activityIndicator" destination="1vN-xH-5le" id="8WN-Hp-yWh"/>
-                        <outlet property="pushButton" destination="DPy-Dy-hXG" id="anW-mj-BTH"/>
-                        <outlet property="standButton" destination="dEw-21-a0n" id="hd5-7S-JQm"/>
-                        <outlet property="walkButton" destination="GWt-xV-dgq" id="IK1-Eq-mS1"/>
+                        <outlet property="activityIndicator" destination="1vN-xH-5le" id="7eR-wR-aGg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j6O-rF-HJN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="713" y="-243"/>
         </scene>
-        <!--Training View Controller-->
+        <!--Session View Controller-->
         <scene sceneID="KaW-bA-P1L">
             <objects>
-                <viewController storyboardIdentifier="TrainingViewController" id="rOY-OO-Sti" customClass="TrainingViewController" customModule="Motion_Learning" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SessionViewController" id="rOY-OO-Sti" customClass="SessionViewController" customModule="Motion_Learning" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tLU-SP-HCc"/>
                         <viewControllerLayoutGuide type="bottom" id="2Y2-77-MrC"/>
@@ -194,4 +168,12 @@
             <point key="canvasLocation" x="713" y="437"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Pushing" width="118" height="157"/>
+        <image name="PushingPress" width="118" height="157"/>
+        <image name="Standing" width="135" height="183"/>
+        <image name="StandingPress" width="135" height="183"/>
+        <image name="Walking" width="87" height="183"/>
+        <image name="WalkingPress" width="87" height="183"/>
+    </resources>
 </document>

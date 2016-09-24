@@ -157,7 +157,28 @@
                     <view key="view" contentMode="scaleToFill" id="RLo-kJ-MAg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3wP-Yw-vAA">
+                                <connections>
+                                    <segue destination="RnI-YI-Yjw" kind="embed" identifier="animationViewController" id="EEQ-5t-hGA"/>
+                                </connections>
+                            </containerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kq0-x3-WDE">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="nk3-Bd-UBa"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Kq0-x3-WDE" firstAttribute="bottom" secondItem="2Y2-77-MrC" secondAttribute="top" id="6cG-hg-rc1"/>
+                            <constraint firstItem="Kq0-x3-WDE" firstAttribute="width" secondItem="RLo-kJ-MAg" secondAttribute="width" id="Bn0-92-6qa"/>
+                            <constraint firstItem="Kq0-x3-WDE" firstAttribute="centerX" secondItem="RLo-kJ-MAg" secondAttribute="centerX" id="Xug-DN-Kb7"/>
+                            <constraint firstItem="3wP-Yw-vAA" firstAttribute="height" secondItem="RLo-kJ-MAg" secondAttribute="height" id="ZL1-ka-TKG"/>
+                            <constraint firstItem="3wP-Yw-vAA" firstAttribute="width" secondItem="RLo-kJ-MAg" secondAttribute="width" id="oG9-0h-Asq"/>
+                            <constraint firstItem="3wP-Yw-vAA" firstAttribute="centerX" secondItem="RLo-kJ-MAg" secondAttribute="centerX" id="uHc-ka-720"/>
+                            <constraint firstItem="3wP-Yw-vAA" firstAttribute="bottom" secondItem="Kq0-x3-WDE" secondAttribute="top" id="z1t-HA-aLG"/>
+                        </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
@@ -166,6 +187,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eFC-tq-YOj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="713" y="437"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="sJM-Vr-YRA">
+            <objects>
+                <viewController id="RnI-YI-Yjw" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="H02-qN-2kc"/>
+                        <viewControllerLayoutGuide type="bottom" id="p7v-Sv-IY6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Cn-hW-aeW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hme-Ta-WdN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1468" y="440"/>
         </scene>
     </scenes>
     <resources>

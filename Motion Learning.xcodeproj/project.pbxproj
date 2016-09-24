@@ -22,6 +22,7 @@
 		F934945B1D91E20800D4FDA5 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93494521D91E20800D4FDA5 /* Storage.swift */; };
 		F934945C1D91E20800D4FDA5 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93494531D91E20800D4FDA5 /* Vector.swift */; };
 		F93494601D92654A00D4FDA5 /* MotionDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F934945F1D92654A00D4FDA5 /* MotionDetector.swift */; };
+		F96138721D9682F000CBDEB7 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96138711D9682F000CBDEB7 /* AnimationViewController.swift */; };
 		F97F80D61D945CA100874718 /* MotionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97F80D51D945CA100874718 /* MotionType.swift */; };
 		F97F80DA1D94926D00874718 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97F80D91D94926D00874718 /* Calculator.swift */; };
 		F9B184891D9325E200EF6FD0 /* MotionRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9B184881D9325E200EF6FD0 /* MotionRecorder.swift */; };
@@ -52,6 +53,7 @@
 		F93494521D91E20800D4FDA5 /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		F93494531D91E20800D4FDA5 /* Vector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector.swift; sourceTree = "<group>"; };
 		F934945F1D92654A00D4FDA5 /* MotionDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionDetector.swift; sourceTree = "<group>"; };
+		F96138711D9682F000CBDEB7 /* AnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
 		F97F80D51D945CA100874718 /* MotionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionType.swift; sourceTree = "<group>"; };
 		F97F80D91D94926D00874718 /* Calculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		F9B184881D9325E200EF6FD0 /* MotionRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MotionRecorder.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				F9FFDF2D1D90747E00F63E96 /* LogViewController.swift */,
 				F9FFDF2F1D9074A400F63E96 /* TrainingViewController.swift */,
 				F9FFDF311D9074BF00F63E96 /* SessionViewController.swift */,
+				F96138711D9682F000CBDEB7 /* AnimationViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				F93494581D91E20800D4FDA5 /* Operations.swift in Sources */,
 				F93494561D91E20800D4FDA5 /* FFNN.swift in Sources */,
 				F9FFDF2E1D90747E00F63E96 /* LogViewController.swift in Sources */,
+				F96138721D9682F000CBDEB7 /* AnimationViewController.swift in Sources */,
 				F934945C1D91E20800D4FDA5 /* Vector.swift in Sources */,
 				F93494591D91E20800D4FDA5 /* Random.swift in Sources */,
 				F927B47F1D8F154300F4D297 /* ModelController.swift in Sources */,

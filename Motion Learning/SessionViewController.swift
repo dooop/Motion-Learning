@@ -11,6 +11,14 @@ import CoreMotion
 
 class SessionViewController: UIViewController {
     
+    private var animationViewController: AnimationViewController?
+    
+    override func performSegue(withIdentifier identifier: String, sender: Any?) {
+        if identifier == "animationViewController" {
+            animationViewController = sender as? AnimationViewController
+        }
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         MotionRecorder.shared.startRecording(onSequenceRecorded: analyse)
         

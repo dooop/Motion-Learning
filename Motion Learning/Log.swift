@@ -12,7 +12,7 @@ class Log {
     
     static let shared = Log()
     
-    private let maxEntries = 1000
+    private let maxEntries = 420
     
     private(set) var entries: [String] = []
     

@@ -20,14 +20,10 @@ class MotionDetector {
     private let neuralNetwork =
         FFNN(inputs: inputCount, hidden: hidden, outputs: outputCount, learningRate: 0.7, momentum: 0.4, weights: MotionType.weights, activationFunction: .Sigmoid, errorFunction: .CrossEntropy(average: false))
     
-    func resetWeights() -> Bool {
-        do {
-            try neuralNetwork.resetWithWeights(weights: MotionType.weights)
-            return true
-        }
-        catch {
-            return false
-        }
+    func resetWeights() -> [Float] {
+        try? neuralNetwork.resetWithWeights(weights: MotionType.weights)
+        
+        return neuralNetwork.getWeights()
     }
     
     func analyse(inputs: [Float]) -> [Float]? {
@@ -36,6 +32,7 @@ class MotionDetector {
     
     func train(inputs: [Float], for type: MotionType) -> Float? {
         _ = try? neuralNetwork.update(inputs: inputs)
+        
         return try? neuralNetwork.backpropagate(answer: type.output)
     }
     

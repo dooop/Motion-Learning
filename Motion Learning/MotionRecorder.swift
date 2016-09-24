@@ -35,7 +35,7 @@ class MotionRecorder {
         record.removeAll()
         sequences.removeAll()
         
-        manager.startDeviceMotionUpdates(to: OperationQueue.main) { (motion, error) in
+        manager.startDeviceMotionUpdates(to: OperationQueue()) { (motion, error) in
             guard let motion = motion else {
                 return
             }

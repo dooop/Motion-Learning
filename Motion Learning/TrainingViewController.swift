@@ -8,6 +8,7 @@
 
 import UIKit
 import AVFoundation
+import CoreMotion
 
 class TrainingViewController: UIViewController {
     
@@ -24,32 +25,37 @@ class TrainingViewController: UIViewController {
     @IBAction func push(_ sender: UIButton) {
         train(.pushing)
     }
-    
+        
     func train(_ type: MotionType) {
-        var recordingStarted = false
         UIApplication.shared.beginIgnoringInteractionEvents()
         activityIndicator.startAnimating()
         
-        MotionRecorder.shared.startRecording { sequence in
-            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
-            
-            if !recordingStarted {
-                recordingStarted = true
-                
-                return
-            }
-            
-            MotionRecorder.shared.stopRecording()
-            
-            UIApplication.shared.endIgnoringInteractionEvents()
-            self.activityIndicator.stopAnimating()
-            
+        self.recordMotionSequence(after: .now() + 3) { sequence in
             DispatchQueue.global().async {
                 let inputs = MotionDetector.shared.inputs(for: sequence)
                 let totalCalculatedError = MotionDetector.shared.train(inputs: inputs, for: type)
                 
-                Log.shared.write(entry: "Add \(inputs.count) inputs for \(type.rawValue.uppercased()) with total calculated error \(totalCalculatedError ?? 0)")
+                DispatchQueue.main.async {
+                    UIApplication.shared.endIgnoringInteractionEvents()
+                    self.activityIndicator.stopAnimating()
+                    
+                    Log.shared.write(entry: "Train \(type.rawValue.uppercased())\nError: \(totalCalculatedError ?? 0)\nInputs: \(inputs)\n")
+                }
             }
+        }
+    }
+    
+    func recordMotionSequence(after delay: DispatchTime, with completion: @escaping ([CMDeviceMotion]) -> Void) {
+        DispatchQueue.main.asyncAfter(deadline: delay) {
+            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+            
+            MotionRecorder.shared.startRecording(onSequenceRecorded: { sequence in
+                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+                
+                MotionRecorder.shared.stopRecording()
+                
+                completion(sequence)
+            })
         }
     }
 }

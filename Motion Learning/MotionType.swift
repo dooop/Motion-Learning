@@ -28,7 +28,7 @@ enum MotionType: String {
             return [0,0,1]
         }
     }
-    
+        
     static func by(output: [Float]) -> MotionType? {
         print("output: \(output)")
         guard let max = output.sorted(by: >).first(where: { $0 <= 1 }), let maxIndex = output.index(of: max), output.count == all.count else {

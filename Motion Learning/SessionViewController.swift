@@ -49,20 +49,21 @@ class SessionViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         MotionRecorder.shared.stopRecording()
         
-        print("did disappear")
         detectedMotion = nil
     }
     
     func analyse(sequence: [CMDeviceMotion]) {
         DispatchQueue.global().async {
             let inputs = MotionDetector.shared.inputs(for: sequence)
-            let type = MotionDetector.shared.detect(inputs: inputs)
+            let output: [Float] = MotionDetector.shared.analyse(inputs: inputs) ?? []
+            let type = MotionType.by(output: output)
+            let typeName = type?.rawValue.uppercased() ?? "NOTHING"
             
             DispatchQueue.main.async {
                 self.detectedMotion = type
+                
+                Log.shared.write(entry: "Detected \(typeName)\nOutput: \(output)\n")
             }
-            
-            Log.shared.write(entry: "\(type?.rawValue.uppercased() ?? "NOTHING") detected")
         }
     }
 }

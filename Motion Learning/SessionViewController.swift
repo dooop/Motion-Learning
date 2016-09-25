@@ -43,7 +43,7 @@ class SessionViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        MotionRecorder.shared.startRecording(onSequenceRecorded: analyse)
+        MotionRecorder.shared.startRecording(onSequenceRecorded: analyze)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -52,10 +52,10 @@ class SessionViewController: UIViewController {
         detectedMotion = nil
     }
     
-    func analyse(sequence: [CMDeviceMotion]) {
+    func analyze(sequence: [CMDeviceMotion]) {
         DispatchQueue.global().async {
             let inputs = MotionDetector.shared.inputs(for: sequence)
-            let output: [Float] = MotionDetector.shared.analyse(inputs: inputs) ?? []
+            let output: [Float] = MotionDetector.shared.analyze(inputs: inputs) ?? []
             let type = MotionType.by(output: output)
             let typeName = type?.rawValue.uppercased() ?? "NOTHING"
             

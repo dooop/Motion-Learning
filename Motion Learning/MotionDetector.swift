@@ -26,14 +26,14 @@ class MotionDetector {
         return neuralNetwork.getWeights()
     }
     
-    func analyse(inputs: [Float]) -> [Float]? {
+    func analyze(inputs: [Float]) -> [Float]? {
         return try? neuralNetwork.update(inputs: inputs)
     }
     
     func train(inputs: [Float], for type: MotionType) -> Float? {
         _ = try? neuralNetwork.update(inputs: inputs)
         
-        return try? neuralNetwork.backpropagate(answer: type.output)
+        return try? neuralNetwork.backpropagate(answer: type.answer)
     }
     
     func detect(inputs: [Float]) -> MotionType? {
@@ -66,10 +66,21 @@ class MotionDetector {
         inputs.append(Calculator.energy(of: accelerationX))
         inputs.append(Calculator.energy(of: accelerationY))
         inputs.append(Calculator.energy(of: accelerationZ))
-        inputs.append(accelerationX.max() ?? 0)
-        inputs.append(accelerationY.max() ?? 0)
-        inputs.append(accelerationZ.max() ?? 0)
+        inputs.append(Calculator.max(of: accelerationX))
+        inputs.append(Calculator.max(of: accelerationY))
+        inputs.append(Calculator.max(of: accelerationZ))
         
         return inputs
     }
+    
+//    func inputs(for acceleration: [CMAcceleration]) -> [Float] {
+//        var inputs = [Float]()
+//        
+//        inputs.append(Calculator.average(of: acceleration))
+//        inputs.append(Calculator.standardDeviation(of: acceleration))
+//        inputs.append(Calculator.energy(of: acceleration))
+//        inputs.append(Calculator.max(of: acceleration))
+//        
+//        return inputs
+//    }
 }

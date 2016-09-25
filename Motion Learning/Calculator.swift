@@ -80,4 +80,10 @@ class Calculator {
         
         return energy
     }
+    
+    static func max(of values: [Float]) -> Float {
+        let max = values.max() ?? 0
+        
+        return max
+    }
 }

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D063DCEADD80630BA8FBE8A /* Pods_Motion_Learning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14835E9A12BC9E53066AD08F /* Pods_Motion_Learning.framework */; };
 		F927B4791D8F154300F4D297 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F927B4781D8F154300F4D297 /* AppDelegate.swift */; };
 		F927B47B1D8F154300F4D297 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F927B47A1D8F154300F4D297 /* RootViewController.swift */; };
 		F927B47F1D8F154300F4D297 /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F927B47E1D8F154300F4D297 /* ModelController.swift */; };
@@ -36,9 +35,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		14835E9A12BC9E53066AD08F /* Pods_Motion_Learning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Motion_Learning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		48433D4EB45845138F2CC126 /* Pods-Motion Learning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Motion Learning.release.xcconfig"; path = "Pods/Target Support Files/Pods-Motion Learning/Pods-Motion Learning.release.xcconfig"; sourceTree = "<group>"; };
-		9A875E875835FF198A81B0FD /* Pods-Motion Learning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Motion Learning.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Motion Learning/Pods-Motion Learning.debug.xcconfig"; sourceTree = "<group>"; };
 		F927B4751D8F154300F4D297 /* Motion Learning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Motion Learning.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F927B4781D8F154300F4D297 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F927B47A1D8F154300F4D297 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -73,37 +69,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D063DCEADD80630BA8FBE8A /* Pods_Motion_Learning.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		86C8F748C7EDEEE5881C1C40 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				9A875E875835FF198A81B0FD /* Pods-Motion Learning.debug.xcconfig */,
-				48433D4EB45845138F2CC126 /* Pods-Motion Learning.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		89E8FC569CD674F49B5DD673 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				14835E9A12BC9E53066AD08F /* Pods_Motion_Learning.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		F927B46C1D8F154300F4D297 = {
 			isa = PBXGroup;
 			children = (
 				F927B4771D8F154300F4D297 /* Motion Learning */,
 				F927B4761D8F154300F4D297 /* Products */,
-				86C8F748C7EDEEE5881C1C40 /* Pods */,
-				89E8FC569CD674F49B5DD673 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -195,12 +171,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F927B48B1D8F154300F4D297 /* Build configuration list for PBXNativeTarget "Motion Learning" */;
 			buildPhases = (
-				3B6B5A58AFE335F025056F35 /* [CP] Check Pods Manifest.lock */,
 				F927B4711D8F154300F4D297 /* Sources */,
 				F927B4721D8F154300F4D297 /* Frameworks */,
 				F927B4731D8F154300F4D297 /* Resources */,
-				1BC2A8589C9909EDE58850FB /* [CP] Embed Pods Frameworks */,
-				0289A24A6D16078565D2248C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,54 +233,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		0289A24A6D16078565D2248C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Motion Learning/Pods-Motion Learning-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1BC2A8589C9909EDE58850FB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Motion Learning/Pods-Motion Learning-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3B6B5A58AFE335F025056F35 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F927B4711D8F154300F4D297 /* Sources */ = {
@@ -456,7 +381,6 @@
 		};
 		F927B48C1D8F154300F4D297 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A875E875835FF198A81B0FD /* Pods-Motion Learning.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8D6429E7E3;
@@ -470,7 +394,6 @@
 		};
 		F927B48D1D8F154300F4D297 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 48433D4EB45845138F2CC126 /* Pods-Motion Learning.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8D6429E7E3;

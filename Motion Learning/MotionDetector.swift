@@ -18,7 +18,7 @@ class MotionDetector {
     static let hidden = (inputCount * 2 / 3) + outputCount
     
     private let neuralNetwork =
-        FFNN(inputs: inputCount, hidden: hidden, outputs: outputCount, learningRate: 0.7, momentum: 0.4, weights: MotionType.weights, activationFunction: .Sigmoid, errorFunction: .CrossEntropy(average: false))
+        FFNN(inputs: inputCount, hidden: hidden, outputs: outputCount, learningRate: 0.7, momentum: 0.4, weights: nil, activationFunction: .Sigmoid, errorFunction: .CrossEntropy(average: false))
     
     func resetWeights() -> [Float] {
         try? neuralNetwork.resetWithWeights(weights: MotionType.weights)
@@ -47,15 +47,9 @@ class MotionDetector {
     func inputs(for sequence: [CMDeviceMotion]) -> [Float] {
         var inputs = [Float]()
         
-        var accelerationX  = [Float]()
-        var accelerationY  = [Float]()
-        var accelerationZ  = [Float]()
-        
-        sequence.forEach { motion in
-            accelerationX.append(Float(motion.userAcceleration.x))
-            accelerationY.append(Float(motion.userAcceleration.y))
-            accelerationZ.append(Float(motion.userAcceleration.z))
-        }
+        let accelerationX  = sequence.flatMap({ Float($0.userAcceleration.x) })
+        let accelerationY  = sequence.flatMap({ Float($0.userAcceleration.y) })
+        let accelerationZ  = sequence.flatMap({ Float($0.userAcceleration.z) })
         
         inputs.append(Calculator.average(of: accelerationX))
         inputs.append(Calculator.average(of: accelerationY))
@@ -72,15 +66,4 @@ class MotionDetector {
         
         return inputs
     }
-    
-//    func inputs(for acceleration: [CMAcceleration]) -> [Float] {
-//        var inputs = [Float]()
-//        
-//        inputs.append(Calculator.average(of: acceleration))
-//        inputs.append(Calculator.standardDeviation(of: acceleration))
-//        inputs.append(Calculator.energy(of: acceleration))
-//        inputs.append(Calculator.max(of: acceleration))
-//        
-//        return inputs
-//    }
 }

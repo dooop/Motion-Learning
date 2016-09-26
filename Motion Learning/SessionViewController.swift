@@ -17,6 +17,7 @@ class SessionViewController: UIViewController {
     
     private var animationViewController: AnimationViewController?
     private var icons = [MotionType: UIImageView]()
+    private var weightsSet = false
     
     private var detectedMotion: MotionType? {
         didSet {
@@ -40,6 +41,12 @@ class SessionViewController: UIViewController {
         icons[.standing] = standingIcon
         icons[.walking] = walkingIcon
         icons[.pushing] = pushingIcon
+        
+        if !weightsSet {
+            let weights = MotionDetector.shared.resetWeights()
+            Log.shared.write(entry: "Weights: \(weights)\n")
+            weightsSet = true
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -62,7 +69,7 @@ class SessionViewController: UIViewController {
             DispatchQueue.main.async {
                 self.detectedMotion = type
                 
-                Log.shared.write(entry: "Detected \(typeName)\nOutput: \(output)\n")
+                Log.shared.write(entry: "Detected \(typeName)\nAnswer: \(type?.answer ?? [])\nOutput: \(output)\n")
             }
         }
     }

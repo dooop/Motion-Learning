@@ -23,6 +23,12 @@ extension UIView {
     }
 }
 
+extension Float {
+    var format: String {
+        return String(format: "%.5f", self)
+    }
+}
+
 extension CALayer {
     func fade(to opacity: CGFloat) {
         let animation = CABasicAnimation(keyPath: "opacity")

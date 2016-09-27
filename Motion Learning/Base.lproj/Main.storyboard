@@ -98,6 +98,7 @@
                                         <state key="normal" image="StandingIcon">
                                             <color key="titleColor" red="0.26666666666666666" green="0.6705882352941176" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <state key="disabled" image="StandingIcon-Blue"/>
                                         <state key="highlighted" image="StandingIcon-Blue">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </state>
@@ -110,6 +111,7 @@
                                         <state key="normal" image="WalkingIcon">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </state>
+                                        <state key="disabled" image="WalkingIcon-Blue"/>
                                         <state key="highlighted" image="WalkingIcon-Blue"/>
                                         <connections>
                                             <action selector="walk:" destination="Tic-IV-5fr" eventType="touchUpInside" id="VsH-ff-mtv"/>
@@ -120,6 +122,7 @@
                                         <state key="normal" image="PushingIcon">
                                             <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         </state>
+                                        <state key="disabled" image="PushingIcon-Blue"/>
                                         <state key="highlighted" image="PushingIcon-Blue"/>
                                         <connections>
                                             <action selector="push:" destination="Tic-IV-5fr" eventType="touchUpInside" id="QI4-GL-4A0"/>

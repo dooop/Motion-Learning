@@ -15,18 +15,27 @@ class TrainingViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     @IBAction func stand(_ sender: UIButton) {
-        train(.standing)
+        sender.isEnabled = false
+        train(.standing, with: {
+            sender.isEnabled = true
+        })
     }
     
     @IBAction func walk(_ sender: UIButton) {
-        train(.walking)
+        sender.isEnabled = false
+        train(.walking, with: {
+            sender.isEnabled = true
+        })
     }
     
     @IBAction func push(_ sender: UIButton) {
-        train(.pushing)
+        sender.isEnabled = false
+        train(.pushing, with: {
+            sender.isEnabled = true
+        })
     }
         
-    func train(_ type: MotionType) {
+    func train(_ type: MotionType, with completion: @escaping () -> Void) {
         UIApplication.shared.beginIgnoringInteractionEvents()
         activityIndicator.startAnimating()
         
@@ -40,6 +49,7 @@ class TrainingViewController: UIViewController {
                     self.activityIndicator.stopAnimating()
                     
                     Log.shared.write(entry: "Train \(type.rawValue.uppercased())\nError: \(totalCalculatedError ?? 0)\nInputs: \(inputs)\n")
+                    completion()
                 }
             }
         }

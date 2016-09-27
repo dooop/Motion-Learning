@@ -59,12 +59,14 @@ class AnimationViewController : UIViewController {
     
     func loadAnimations() {
         guard let standingAnimationPath = Bundle.main.path(forResource: "standingAnimation", ofType:"mp4"),
-            let walkingAnimationPath = Bundle.main.path(forResource: "walkingAnimation", ofType:"mp4") else {
+            let walkingAnimationPath = Bundle.main.path(forResource: "walkingAnimation", ofType:"mp4"),
+            let pushingAnimationPath = Bundle.main.path(forResource: "pushingAnimation", ofType:"mp4") else {
                 return
         }
         
         videos[.standing] = AVPlayer(url: URL(fileURLWithPath: standingAnimationPath))
         videos[.walking] = AVPlayer(url: URL(fileURLWithPath: walkingAnimationPath))
+        videos[.pushing] = AVPlayer(url: URL(fileURLWithPath: pushingAnimationPath))
     }
     
     func restartAnimation() {

@@ -13,7 +13,7 @@ class MotionDetector {
     
     static let shared = MotionDetector()
     
-    static let inputCount = 12
+    static let inputCount = 9
     static let outputCount = MotionType.all.count
     static let hidden = (inputCount * 2 / 3) + outputCount
     
@@ -60,9 +60,6 @@ class MotionDetector {
         inputs.append(Calculator.energy(of: accelerationX))
         inputs.append(Calculator.energy(of: accelerationY))
         inputs.append(Calculator.energy(of: accelerationZ))
-        inputs.append(Calculator.max(of: accelerationX))
-        inputs.append(Calculator.max(of: accelerationY))
-        inputs.append(Calculator.max(of: accelerationZ))
         
         return inputs
     }

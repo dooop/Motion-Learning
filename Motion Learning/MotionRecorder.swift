@@ -16,7 +16,7 @@ class MotionRecorder {
     private let manager = CMMotionManager()
     
     private let sequenceCount: Int
-    private let sequenceDuration: TimeInterval = 3.0
+    private let sequenceDuration: TimeInterval = 1.0
     private let updatesPerSecond: Double = 50.0
     
     private(set) var sequences: [[CMDeviceMotion]] = []

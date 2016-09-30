@@ -214,12 +214,12 @@
                                     <constraint firstItem="Kq0-x3-WDE" firstAttribute="top" secondItem="YZ8-uU-cMq" secondAttribute="top" constant="20" id="c1U-jb-nKP"/>
                                     <constraint firstItem="Kq0-x3-WDE" firstAttribute="trailing" secondItem="YZ8-uU-cMq" secondAttribute="trailing" constant="-20" id="emm-eO-Fgw"/>
                                     <constraint firstItem="Kq0-x3-WDE" firstAttribute="bottom" secondItem="YZ8-uU-cMq" secondAttribute="bottom" constant="-20" id="p1y-7b-F2P"/>
-                                    <constraint firstAttribute="height" constant="120" id="zuH-G1-iG2"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="YZ8-uU-cMq" firstAttribute="height" secondItem="RLo-kJ-MAg" secondAttribute="height" multiplier="0.25" id="2hq-PM-FEz"/>
                             <constraint firstItem="YZ8-uU-cMq" firstAttribute="bottom" secondItem="2Y2-77-MrC" secondAttribute="top" id="N8q-gd-DCP"/>
                             <constraint firstItem="YZ8-uU-cMq" firstAttribute="width" secondItem="RLo-kJ-MAg" secondAttribute="width" id="OpH-mw-jP1"/>
                             <constraint firstItem="3wP-Yw-vAA" firstAttribute="height" secondItem="RLo-kJ-MAg" secondAttribute="height" id="ZL1-ka-TKG"/>
@@ -251,7 +251,7 @@
                         <viewControllerLayoutGuide type="bottom" id="p7v-Sv-IY6"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4Cn-hW-aeW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>

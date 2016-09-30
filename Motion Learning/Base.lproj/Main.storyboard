@@ -168,56 +168,65 @@
                                     <segue destination="RnI-YI-Yjw" kind="embed" identifier="animationViewController" id="EEQ-5t-hGA"/>
                                 </connections>
                             </containerView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Kq0-x3-WDE">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YZ8-uU-cMq">
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BHh-cc-jzF" userLabel="Standing Container">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Kq0-x3-WDE">
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StandingIcon" highlightedImage="StandingIcon-Blue" translatesAutoresizingMaskIntoConstraints="NO" id="t7q-be-aon"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BHh-cc-jzF" userLabel="Standing Container">
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="StandingIcon" highlightedImage="StandingIcon-Blue" translatesAutoresizingMaskIntoConstraints="NO" id="t7q-be-aon"/>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="t7q-be-aon" firstAttribute="centerX" secondItem="BHh-cc-jzF" secondAttribute="centerX" id="3ET-vs-ish"/>
+                                                    <constraint firstItem="t7q-be-aon" firstAttribute="height" secondItem="BHh-cc-jzF" secondAttribute="height" id="BeF-r7-Th9"/>
+                                                    <constraint firstItem="t7q-be-aon" firstAttribute="centerY" secondItem="BHh-cc-jzF" secondAttribute="centerY" id="Bj2-d6-enV"/>
+                                                    <constraint firstItem="t7q-be-aon" firstAttribute="width" secondItem="BHh-cc-jzF" secondAttribute="width" id="VhY-9z-Uer"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SN9-EX-0Hc" userLabel="Walking Container">
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WalkingIcon" highlightedImage="WalkingIcon-Blue" translatesAutoresizingMaskIntoConstraints="NO" id="RPc-xB-NmV"/>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="RPc-xB-NmV" firstAttribute="centerX" secondItem="SN9-EX-0Hc" secondAttribute="centerX" id="FfW-sz-jzJ"/>
+                                                    <constraint firstItem="RPc-xB-NmV" firstAttribute="width" secondItem="SN9-EX-0Hc" secondAttribute="width" id="HJZ-OZ-fDN"/>
+                                                    <constraint firstItem="RPc-xB-NmV" firstAttribute="centerY" secondItem="SN9-EX-0Hc" secondAttribute="centerY" id="eyO-KV-mks"/>
+                                                    <constraint firstItem="RPc-xB-NmV" firstAttribute="height" secondItem="SN9-EX-0Hc" secondAttribute="height" id="hDx-DD-52j"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WsV-aX-oMZ" userLabel="Pushing Container">
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PushingIcon" highlightedImage="PushingIcon-Blue" translatesAutoresizingMaskIntoConstraints="NO" id="hzo-tN-vHn"/>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="hzo-tN-vHn" firstAttribute="height" secondItem="WsV-aX-oMZ" secondAttribute="height" multiplier="0.86" id="17T-OG-Fwc"/>
+                                                    <constraint firstItem="hzo-tN-vHn" firstAttribute="width" secondItem="WsV-aX-oMZ" secondAttribute="width" id="4bd-hb-buF"/>
+                                                    <constraint firstItem="hzo-tN-vHn" firstAttribute="bottom" secondItem="WsV-aX-oMZ" secondAttribute="bottom" id="Fd8-yX-deJ"/>
+                                                    <constraint firstItem="hzo-tN-vHn" firstAttribute="centerX" secondItem="WsV-aX-oMZ" secondAttribute="centerX" id="WfF-WF-q6F"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="t7q-be-aon" firstAttribute="centerX" secondItem="BHh-cc-jzF" secondAttribute="centerX" id="3ET-vs-ish"/>
-                                            <constraint firstItem="t7q-be-aon" firstAttribute="height" secondItem="BHh-cc-jzF" secondAttribute="height" id="BeF-r7-Th9"/>
-                                            <constraint firstItem="t7q-be-aon" firstAttribute="centerY" secondItem="BHh-cc-jzF" secondAttribute="centerY" id="Bj2-d6-enV"/>
-                                            <constraint firstItem="t7q-be-aon" firstAttribute="width" secondItem="BHh-cc-jzF" secondAttribute="width" id="VhY-9z-Uer"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SN9-EX-0Hc" userLabel="Walking Container">
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="WalkingIcon" highlightedImage="WalkingIcon-Blue" translatesAutoresizingMaskIntoConstraints="NO" id="RPc-xB-NmV"/>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="RPc-xB-NmV" firstAttribute="centerX" secondItem="SN9-EX-0Hc" secondAttribute="centerX" id="FfW-sz-jzJ"/>
-                                            <constraint firstItem="RPc-xB-NmV" firstAttribute="width" secondItem="SN9-EX-0Hc" secondAttribute="width" id="HJZ-OZ-fDN"/>
-                                            <constraint firstItem="RPc-xB-NmV" firstAttribute="centerY" secondItem="SN9-EX-0Hc" secondAttribute="centerY" id="eyO-KV-mks"/>
-                                            <constraint firstItem="RPc-xB-NmV" firstAttribute="height" secondItem="SN9-EX-0Hc" secondAttribute="height" id="hDx-DD-52j"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WsV-aX-oMZ" userLabel="Pushing Container">
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PushingIcon" highlightedImage="PushingIcon-Blue" translatesAutoresizingMaskIntoConstraints="NO" id="hzo-tN-vHn"/>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstItem="hzo-tN-vHn" firstAttribute="height" secondItem="WsV-aX-oMZ" secondAttribute="height" multiplier="0.86" id="17T-OG-Fwc"/>
-                                            <constraint firstItem="hzo-tN-vHn" firstAttribute="width" secondItem="WsV-aX-oMZ" secondAttribute="width" id="4bd-hb-buF"/>
-                                            <constraint firstItem="hzo-tN-vHn" firstAttribute="bottom" secondItem="WsV-aX-oMZ" secondAttribute="bottom" id="Fd8-yX-deJ"/>
-                                            <constraint firstItem="hzo-tN-vHn" firstAttribute="centerX" secondItem="WsV-aX-oMZ" secondAttribute="centerX" id="WfF-WF-q6F"/>
-                                        </constraints>
-                                    </view>
+                                    </stackView>
                                 </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="nk3-Bd-UBa"/>
+                                    <constraint firstItem="Kq0-x3-WDE" firstAttribute="leading" secondItem="YZ8-uU-cMq" secondAttribute="leading" constant="20" id="FwA-BQ-3ye"/>
+                                    <constraint firstItem="Kq0-x3-WDE" firstAttribute="top" secondItem="YZ8-uU-cMq" secondAttribute="top" constant="20" id="c1U-jb-nKP"/>
+                                    <constraint firstItem="Kq0-x3-WDE" firstAttribute="trailing" secondItem="YZ8-uU-cMq" secondAttribute="trailing" constant="-20" id="emm-eO-Fgw"/>
+                                    <constraint firstItem="Kq0-x3-WDE" firstAttribute="bottom" secondItem="YZ8-uU-cMq" secondAttribute="bottom" constant="-20" id="p1y-7b-F2P"/>
+                                    <constraint firstAttribute="height" constant="120" id="zuH-G1-iG2"/>
                                 </constraints>
-                            </stackView>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Kq0-x3-WDE" firstAttribute="bottom" secondItem="2Y2-77-MrC" secondAttribute="top" constant="-20" id="6cG-hg-rc1"/>
-                            <constraint firstItem="Kq0-x3-WDE" firstAttribute="width" secondItem="RLo-kJ-MAg" secondAttribute="width" constant="-40" id="Bn0-92-6qa"/>
-                            <constraint firstItem="Kq0-x3-WDE" firstAttribute="centerX" secondItem="RLo-kJ-MAg" secondAttribute="centerX" id="Xug-DN-Kb7"/>
+                            <constraint firstItem="YZ8-uU-cMq" firstAttribute="bottom" secondItem="2Y2-77-MrC" secondAttribute="top" id="N8q-gd-DCP"/>
+                            <constraint firstItem="YZ8-uU-cMq" firstAttribute="width" secondItem="RLo-kJ-MAg" secondAttribute="width" id="OpH-mw-jP1"/>
                             <constraint firstItem="3wP-Yw-vAA" firstAttribute="height" secondItem="RLo-kJ-MAg" secondAttribute="height" id="ZL1-ka-TKG"/>
+                            <constraint firstItem="3wP-Yw-vAA" firstAttribute="bottom" secondItem="YZ8-uU-cMq" secondAttribute="top" constant="28" id="aTP-pd-hdw"/>
+                            <constraint firstItem="YZ8-uU-cMq" firstAttribute="centerX" secondItem="RLo-kJ-MAg" secondAttribute="centerX" id="goN-Iz-J40"/>
                             <constraint firstItem="3wP-Yw-vAA" firstAttribute="width" secondItem="RLo-kJ-MAg" secondAttribute="width" id="oG9-0h-Asq"/>
                             <constraint firstItem="3wP-Yw-vAA" firstAttribute="centerX" secondItem="RLo-kJ-MAg" secondAttribute="centerX" id="uHc-ka-720"/>
-                            <constraint firstItem="3wP-Yw-vAA" firstAttribute="bottom" secondItem="Kq0-x3-WDE" secondAttribute="top" constant="-20" id="z1t-HA-aLG"/>
                         </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
